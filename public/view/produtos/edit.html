@@ -1,0 +1,82 @@
+<div class="container cadastros_pdr_container">
+	<div class="row">
+		<div class="col-md-12 form-group">
+			<a href="index.html">
+				<img src="images/logo_03.png" class="center-block" width="200" border="0"/>
+			</a>
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="text" placeholder=" NOME" ng-model="produto.nome"  class="form-control" />
+		</div>
+		<div class="col-md-6 form-group">
+			<select class="form-control" ng-model="produto.tipoProduto">
+				<option value=""> TIPO DE PRODUTO</option>
+				<option value="DOCE"> DOCE</option>
+				<option value="SALGADO"> SALGADO</option>
+			</select>
+		</div>
+		<div class="col-md-6 form-group">
+			<input class="form-control" type="text" placeholder=" PREÇO" ng-model="produto.preco"  />
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="text" placeholder=" LOCAL"  class="form-control" ng-model="produto.local"/>
+		</div>
+		<div class="col-md-3 form-group">
+			<select class="form-control" ng-model="produto.inicio">
+				<option value=""> INICIO</option>
+				<option value="07:00:00"> 07:00:00</option>
+				<option value="08:00:00"> 08:00:00</option>
+				<option value="09:00:00"> 09:00:00</option>
+				<option value="10:00:00"> 10:00:00</option>
+				<option value="11:00:00"> 11:00:00</option>
+				<option value="12:00:00"> 12:00:00</option>
+				<option value="13:00:00"> 13:00:00</option>
+				<option value="14:00:00"> 14:00:00</option>
+				<option value="15:00:00"> 15:00:00</option>
+				<option value="16:00:00"> 16:00:00</option>
+				<option value="17:00:00"> 17:00:00</option>
+				<option value="18:00:00"> 18:00:00</option>
+				<option value="19:00:00"> 19:00:00</option>
+				<option value="20:00:00"> 20:00:00</option>
+				<option value="21:00:00"> 21:00:00</option>
+				<option value="22:00:00"> 22:00:00</option>
+				<option value="23:00:00"> 23:00:00</option>
+			</select>
+		</div>
+		<div class="col-md-3 form-group">
+			<select class="form-control" ng-model="produto.termino">
+				<option value=""> TÉRMINO</option>
+				<option value="07:00:00"> 07:00:00</option>
+				<option value="08:00:00"> 08:00:00</option>
+				<option value="09:00:00"> 09:00:00</option>
+				<option value="10:00:00"> 10:00:00</option>
+				<option value="11:00:00"> 11:00:00</option>
+				<option value="12:00:00"> 12:00:00</option>
+				<option value="13:00:00"> 13:00:00</option>
+				<option value="14:00:00"> 14:00:00</option>
+				<option value="15:00:00"> 15:00:00</option>
+				<option value="16:00:00"> 16:00:00</option>
+				<option value="17:00:00"> 17:00:00</option>
+				<option value="18:00:00"> 18:00:00</option>
+				<option value="19:00:00"> 19:00:00</option>
+				<option value="20:00:00"> 20:00:00</option>
+				<option value="21:00:00"> 21:00:00</option>
+				<option value="22:00:00"> 22:00:00</option>
+				<option value="23:00:00"> 23:00:00</option>
+			</select>
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="text" placeholder=" DIAS"  class="form-control"  ng-model="produto.dias"/>
+		</div>
+		<div class="col-md-12 form-group">
+			<input id="inpuTdocArquivoId" name="arqnm" type="file" file-model="arquivo"  class="form-control">
+		</div>
+		<div class="col-md-12 form-group">
+			<textarea cols="82" rolws="10" class="form-control" placeholder="COMENTÁRIO" ng-model="produto.comentario"></textarea>
+		</div>
+		<div class="col-md-12 form-group">
+			<a href="#" ng-click="salvar()"><img class="center-block" src="images/btn_cadastrar.png" width="150" border="0"/></a>
+
+		</div>
+	</div>
+</div>

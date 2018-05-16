@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en"  class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en"  class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Como usar charset na <meta> tag">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>UFMGFOOD</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" type="text/css">
+  <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+
+  <div ng-app="appUmglanche">
+	  <div ng-controller="IniCtrl">
+		  <nav ng-show="user.nome" class="navbar navbar-default" >
+			  <div class="container-fluid">
+				  <!-- Brand and toggle get grouped for better mobile display -->
+				  <div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="#"> UFMGFOOD</a>
+					  <a class="navbar-brand" href="#"> Bem Vindo ! {{user.nome}} </a>
+					  <a class="navbar-brand" href="#"> {{user.tipoProduto}} </a>
+
+				  </div>
+
+				  <!-- Collect the nav links, forms, and other content for toggling -->
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+						  <li ui-sref-active="active">
+							  <a class="dropdown-toggle" data-toggle="dropdown">
+								  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+								  Produto
+								  <span class="caret"></span>
+							  </a>
+							  <ul class="dropdown-menu">
+								  <li>
+									  <a ui-sref="cadastra-produto">
+										  <i class="fa fa-certificate" aria-hidden="true"></i>
+										  Incluir Produto
+									  </a>
+								  </li>
+								  <li>
+									  <a ui-sref="lista-produto">
+										  <i class="fa fa-users" aria-hidden="true"></i>
+										  Lista Produtos
+									  </a>
+								  </li>
+							  </ul>
+						  </li>
+					  </ul>
+					  <ul class="nav navbar-nav navbar-right">
+						  <li class="dropdown">
+							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acoes <span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								  <li>
+									  <a href="#" ng-click="deslogar()">
+										  <i class="fa fa-sign-out" aria-hidden="true"></i>
+										  Sair
+									  </a>
+								  </li>
+							  </ul>
+						  </li>
+					  </ul>
+				  </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+		  </nav>
+	  </div>
+
+
+
+	  <div ui-view></div>
+  </div>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-br-filters/release/angular-br-filters.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/blockUI/jquery.blockUI.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+  <script src="bower_components/angular-input-masks/angular-input-masks-standalone.min.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+
+
+  <script src="app.js"></script>
+  <script src="request.js"></script>
+  <script src="controller/HomeCtrl.js"></script>
+  <script src="controller/ProdutosCtrl.js"></script>
+  <script src="controller/UsuarioCtrl.js"></script>
+  <script src="controller/IniCtrl.js"></script>
+  <script src="services/GeneralServices.js"></script>
+  <script src="services/DiretivaMask.js"></script>
+  <script src="services/SessaoNavegacao.js"></script>
+  <script src="services/fileUpload.js"></script>
+
+</body>
+</html>

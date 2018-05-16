@@ -1,0 +1,40 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Usuario
+POST     /usuario/salvar                        UsuarioCotroller.salvar
+POST     /usuario/logar                         UsuarioCotroller.logar
+GET      /usuario/deslogar                      UsuarioCotroller.deslogar
+GET      /usuario/getSessao                     UsuarioCotroller.getSessao
+
+POST     /usuario/listar                        UsuarioCotroller.listar
+POST     /usuario/{id}/get                      UsuarioCotroller.get
+POST     /usuario/delete                        UsuarioCotroller.delete
+
+# Produtos
+POST     /produto/salvar                        ProdutosCotroller.salvar
+POST     /produto/listar                        ProdutosCotroller.listar
+POST     /produto/{id}/get                      ProdutosCotroller.get
+POST     /produto/delete                        ProdutosCotroller.delete
+
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET		/										staticFile:/public/index.html
+GET		/app.js									staticFile:/public/app.js
+GET		/request.js								staticFile:/public/request.js
+
+# Catch all
+#*       /{controller}/{action}                  {controller}.{action}
+
+# COMPONENTES FRONT END DA INTRANET
+GET		/bower_components/									staticDir:public/bower_components
+GET		/controller/										staticDir:public/controller
+GET		/view/												staticDir:public/view
+GET		/services/											staticDir:public/services
+GET		/css/												staticDir:public/css
+GET		/images/											staticDir:public/images

@@ -1,0 +1,37 @@
+<div class="container cadastros_pdr_container">
+	<div class="row">
+		<div class="col-md-12 form-group">
+			<a ui-sref="home">
+				<img src="images/logo_03.png" class="center-block" width="200" border="0"/>
+			</a>
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="text" placeholder=" NOME" ng-model="usuario.nome" class="form-control"/>
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="text" placeholder=" EMAIL" ng-model="usuario.email" class="form-control"/>
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="text" placeholder=" TELEFONE" name="tel" ng-model="usuario.fone"  class="form-control" ui-mask="{{phoneMask}}" mask-change="phoneMask"/>
+		</div>
+		<div class="col-md-6 form-group">
+			<input type="password" placeholder=" SENHA" ng-model="usuario.senha" class="form-control"/>
+		</div>
+		<div class="col-md-12 form-group">
+			<select class="form-control" ng-model="usuario.tipoUsuario">
+				<option value=""> TIPO DE USUÁRIO</option>
+				<option value="VENDEDOR"> VENDEDOR</option>
+				<option value="COMPRADOR"> COMPRADOR</option>
+			</select>
+		</div>
+		<div class="col-md-6 form-group">
+			<img class="center-block" src="images/btn_cadastrar.png" ng-click="cadastrar()" width="150" border="0"/>
+		</div>
+		<div class="col-md-6 form-group">
+			<a href="#" ui-sref="home">
+				<!--<img class="center-block" src="images/btn_cadastrar.png" width="150" border="0"/>-->
+				<h3>Voltar</h3>
+			</a>
+		</div>
+	</div>
+</div>
